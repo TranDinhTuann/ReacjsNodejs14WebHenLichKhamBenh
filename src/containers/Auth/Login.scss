@@ -1,0 +1,94 @@
+.login-background {
+    background: linear-gradient(0.25turn,
+            rgba(34, 193, 195, 1),
+            rgba(253, 187, 45, 1));
+    height: 100vh;
+
+    .login-container {
+        width: 400px;
+        border-radius: 10px;
+        background-color: white;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+        height: 400px;
+
+        .login-content {
+            padding: 16px;
+
+            .text-login {
+                text-align: center;
+                padding-top: 10px;
+                font-weight: 600;
+                font-size: 24px;
+            }
+
+            .form-group {
+                padding-bottom: 20px;
+                font-size: 16px;
+
+                label {
+                    padding-bottom: 6px;
+                }
+
+                .form-control {
+                    // width: 300px; /* Độ rộng của trường nhập liệu */
+                    height: 40px;
+                    /* Chiều cao của trường nhập liệu */
+                    padding: 10px;
+                    /* Khoảng cách giữa nội dung và viền của trường nhập liệu */
+                    font-size: 16px;
+                    /* Cỡ chữ của trường nhập liệu */
+                    border: 2px solid #ccc;
+                    /* Viền của trường nhập liệu */
+                    border-radius: 5px;
+                    /* Bo tròn góc của trường nhập liệu */
+                }
+
+                .button-login {
+                    background: linear-gradient(0.25turn,
+                            rgba(34, 193, 195, 1),
+                            rgba(253, 187, 45, 1));
+                    /* Màu nền */
+                    border: none;
+                    color: white;
+                    padding: 6px 0px;
+                    text-decoration: none;
+                    display: inline-block;
+                    /* Hiển thị như một khối inline */
+                    font-size: 20px;
+                    font-weight: 600;
+                    cursor: pointer;
+                    border-radius: 10px;
+                    position: relative;
+                    /* Cần thiết cho hiệu ứng lướt màu */
+                    overflow: hidden;
+                    /* Cần thiết cho hiệu ứng lướt màu */
+                    width: 100%;
+                }
+
+                .button-login:before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: -100%;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(to right,
+                            rgba(0, 0, 0, 0.05),
+                            rgba(0, 0, 0, 0.05));
+                    transition: left 0.3s;
+                    /* Tốc độ hiệu ứng lướt màu */
+                }
+
+                .button-login:hover:before {
+                    left: 0;
+                    /* Di chuyển gradient từ trái sang phải */
+                }
+            }
+        }
+    }
+}
