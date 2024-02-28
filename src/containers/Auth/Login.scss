@@ -14,7 +14,7 @@
         right: 0;
         left: 0;
         margin: auto;
-        height: 400px;
+        height: 430px;
 
         .login-content {
             padding: 16px;
@@ -48,7 +48,7 @@
                     /* Bo tròn góc của trường nhập liệu */
                 }
 
-                .button-login {
+                .btn-login {
                     background: linear-gradient(0.25turn,
                             rgba(34, 193, 195, 1),
                             rgba(253, 187, 45, 1));
@@ -70,7 +70,7 @@
                     width: 100%;
                 }
 
-                .button-login:before {
+                .btn-login:before {
                     content: "";
                     position: absolute;
                     top: 0;
@@ -84,11 +84,63 @@
                     /* Tốc độ hiệu ứng lướt màu */
                 }
 
-                .button-login:hover:before {
+                .btn-login:hover:before {
                     left: 0;
                     /* Di chuyển gradient từ trái sang phải */
                 }
+
+                .custom-input-password{
+                    position: relative;
+
+                    .far{
+                        position: absolute;
+                        right: 5px;
+                        top: 10px;
+                        cursor: pointer;
+                    }
+                }
             }
+            
+            .forgot-password {
+                font-size: 14px;
+            }
+
+            .text-other-login {
+                font-size: 16px;
+            }
+
+            .social-login {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 10px;
+                .google{
+                    font-size: 25px;
+                    background: rgb(216, 29, 29);
+                    border-radius: 50%;
+                    height: 40px;
+                    width: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: white;
+                    margin-right: 10px;
+                }
+                
+                .facebook{
+                    font-size: 21px;
+                    background: rgb(3, 144, 238);
+                    border-radius: 50%;
+                    height: 40px;
+                    width: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: white;
+                }
+                
+            }
+            
         }
     }
 }
