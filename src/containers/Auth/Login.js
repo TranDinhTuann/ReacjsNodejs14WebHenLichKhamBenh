@@ -7,6 +7,7 @@ import * as actions from "../../store/actions";
 import "./Login.scss";
 import { FormattedMessage } from "react-intl";
 import {handleLoginApi} from "../../services/userServices";
+import { userLoginSuccess } from "../../store/actions";
 
 class Login extends Component {
   constructor(props) {
@@ -48,7 +49,7 @@ class Login extends Component {
         })
       }
       if(data && data.errCode === 0 ){
-        // todo
+        this.props.userLoginSuccess(data.user)  
         console.log('login success');
       }
     } catch (error) {
@@ -59,7 +60,7 @@ class Login extends Component {
           })
         }
       }
-      console.log('hoidanit', error.response)
+      console.log('hoidanit ', error.response)
     }
   }
 
@@ -136,9 +137,9 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     navigate: (path) => dispatch(push(path)),
-    adminLoginSuccess: (adminInfo) =>
-      dispatch(actions.adminLoginSuccess(adminInfo)),
-    adminLoginFail: () => dispatch(actions.adminLoginFail()),
+    // adminLoginSuccess: (adminInfo) => dispatch(actions.adminLoginSuccess(adminInfo)),
+    // userLoginFail: () => dispatch(actions.adminLoginFail()),
+    userLoginSuccess: (userInfor) => dispatch(actions.userLoginSuccess(userInfor))
   };
 };
 
