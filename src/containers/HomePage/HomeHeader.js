@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import './HomeHeader.scss'
+import logo from '../../assets/logo.png'
 class HomeHeader extends Component {
 
     render() {
@@ -11,7 +12,7 @@ class HomeHeader extends Component {
                     <div className='home-header-content'>
                         <div className='left-content'>
                             <i className="fas fa-bars"></i>
-                            <div className='header-logo'></div>
+                            <img className='header-logo' src={logo}></img>
                         </div>
                         <div className='center-content'>
                             <div className='child-content'>
@@ -32,8 +33,12 @@ class HomeHeader extends Component {
                             </div>
                         </div>
                         <div className='right-content'>
-                            <div className='support'><i className="fas fa-question-circle"></i> Hỗ trợ</div>
-                            <div className='flag'>VN</div>
+                            <div className='support'>
+                                <i className="fas fa-question-circle"></i>
+                                Hỗ trợ
+                            </div>
+                            <div className='language-vi'>VN</div>
+                            <div className='language-en'>EN</div>
                         </div>
                     </div>
                 </div>
@@ -69,7 +74,7 @@ class HomeHeader extends Component {
                             </div>
                             <div className='option-child'>
                                 <div className='icon-child'>
-                                    <i className='fas fa-microscope'></i>
+                                    <i className='fas fa-flask'></i>
                                 </div>
                                 <div className='text-child'>Xét nghiệm y học</div>
                             </div>
@@ -81,7 +86,7 @@ class HomeHeader extends Component {
                             </div>
                             <div className='option-child'>
                                 <div className='icon-child'>
-                                    <i className='fas fa-tooth'></i>
+                                    <i className='fas fa-briefcase-medical'></i>
                                 </div>
                                 <div className='text-child'>Khám nha khoa</div>
                             </div>
