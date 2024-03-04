@@ -3,8 +3,11 @@ import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 class UserManage extends Component {
 
-    state = {
-
+    constructor(props){
+        super(props);
+        this.state = {
+            
+        }
     }
 
     componentDidMount() {
@@ -14,7 +17,7 @@ class UserManage extends Component {
 
     render() {
         return (
-            <div className="text-center">Manage users</div>
+            <div className="text-center">Manage users with TuanTD</div>
         );
     }
 
