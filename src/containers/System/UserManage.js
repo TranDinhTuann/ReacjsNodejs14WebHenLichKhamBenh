@@ -24,13 +24,20 @@ class UserManage extends Component {
         // console.log('get user from node.js: ', response);
     }
 
+    handleAddNewUser = () => {
+        alert('click me')
+    }
+
     render() {
         console.log('check render', this.state);
         let arrUsers = this.state.arrUsers;
         return (
             <div className="users-container">
                 <div className="title text-center">Manager users with Tuan</div>
-                <div className="users-table mt-4 mx-3">
+                <div className="mx-1">
+                    <button className="btn btn-primary px-3" onClick={()=>this.handleAddNewUser()}><i className="fas fa-plus me-1"></i>Add new users</button>
+                </div>
+                <div className="users-table mt-4 mx-1">
                     <table id="customers">
                         <tr>
                             <th>First name</th>
@@ -40,7 +47,6 @@ class UserManage extends Component {
                             <th>Action</th>
                         </tr>
                             {arrUsers && arrUsers.map((item,index) => {
-                                console.log('tuan check map', item, index)
                                 return (
                                     <tr>
                                         <td>{item.firstName}</td>
