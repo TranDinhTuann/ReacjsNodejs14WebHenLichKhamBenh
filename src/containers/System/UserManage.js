@@ -3,6 +3,7 @@ import { FormattedMessage } from "react-intl";
 import { connect } from "react-redux";
 import "./UserManager.scss";
 import { getAllUsers } from "../../services/userServices";
+import ModalUser from "./ModalUser";
 class UserManage extends Component {
     constructor(props) {
         super(props);
@@ -33,6 +34,7 @@ class UserManage extends Component {
         let arrUsers = this.state.arrUsers;
         return (
             <div className="users-container">
+            <ModalUser></ModalUser>
                 <div className="title text-center">Manager users with Tuan</div>
                 <div className="mx-1">
                     <button className="btn btn-primary px-3" onClick={()=>this.handleAddNewUser()}><i className="fas fa-plus me-1"></i>Add new users</button>
